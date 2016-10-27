@@ -25,8 +25,10 @@
   "license": "Apache 2.0",
   "main": "./index.js",
   "scripts": {
-    "coverage": "istanbul cover _mocha -- test/*.test.js",
+    "coverage": "./node_modules/.bin/istanbul cover _mocha -- test/*.test.js",
     "docs": "node docs.js",
-    "test": "mocha test/*.test.js"
+    "test": "./node_modules/.bin/mocha test/*.test.js",
+    "eslint": "./node_modules/.bin/eslint ./",
+    "eslint-fix": "./node_modules/.bin/eslint ./ --fix"
   }
 }
